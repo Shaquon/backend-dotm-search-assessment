@@ -12,7 +12,6 @@ import sys
 import argparse
 import zipfile
 
-#takes 
 def create_parser():
     parser = argparse.ArgumentParser(description='searches through dotm files for text')
     parser.add_argument('--dir', help='the directory you want to search through', default='.')
@@ -22,7 +21,7 @@ def create_parser():
 # print(args.accumulate(args.integers))
 
 def search_file_for_text(filename, searchtext):
-    """1) opens up a if file is a zipfile if not error is printed
+    """1) opens up a zipfile
        2) searches for substring"""
     if zipfile.is_zipfile(filename) == False:
         print("error: not a zipfile")
